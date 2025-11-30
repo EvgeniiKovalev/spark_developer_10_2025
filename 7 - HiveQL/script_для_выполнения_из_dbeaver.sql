@@ -25,7 +25,7 @@ use airline_db;
 
 --airports
 --drop table raw_airports;
-create external table raw_airports (
+create external table if not exists raw_airports (
     airport_id int,
     city string,
     state string,
@@ -118,7 +118,7 @@ from raw_flights;
 
 
 --select  * from flights
-describe flights;
+--describe flights;
 
 
 --1. всего аэропортов и перелетов
